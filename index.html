@@ -209,6 +209,28 @@
         }
     });
 </script>
+<script>
+    document.getElementById("quiz-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Spriječava da se stranica ponovo učita
+
+        let score = 0;
+        const totalQuestions = 14;
+
+        // Provjeri odgovore (promijeni prema svojim pitanjima)
+        if (document.getElementById("q1a").checked) score++;
+        if (document.getElementById("q2b").checked) score++;
+        if (document.getElementById("q3a").checked) score++;
+        if (document.getElementById("q4b").checked) score++;
+        if (document.getElementById("q5a").checked) score++;
+        if (document.getElementById("q6b").checked) score++;
+        if (document.getElementById("q7a").checked) score++;
+        if (document.getElementById("q8a").checked) score++;
+        // Nastavi za ostala pitanja...
+
+        // Prikaži rezultat
+        alert(`Tvoj rezultat je ${score} od ${totalQuestions} tačnih odgovora.`);
+    });
+</script>
 
 </body>
 </html>
