@@ -1,157 +1,122 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="bs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pi Kviz</title>
-    <!-- Povezivanje sa CSS fajlom -->
-    <link rel="stylesheet" href="styles.css"> <!-- Ako je fajl u istom folderu -->
-    <!-- Ako je fajl u folderu 'css', koristi ovo -->
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
 </head>
 <body>
-
-    <header>
-        <h1>Dobrodošli na Pi Kviz!</h1>
-        <p>Testirajte svoje znanje o broju Pi!</p>
-    </header>
-
-    <section>
-        <h2>Uputstvo</h2>
-        <p>Registrujte se sa svojim email-om da biste učestvovali u kvizu. Na kraju će biti izabran pobednik!</p>
-    </section>
-
-    <section id="registration">
-        <h2>Registracija</h2>
-        <form action="#" method="POST" id="registration-form">
-            <label for="email">Unesite vaš email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Prijavite se</button>
+    <h1>Dobrodošli na Pi Kviz!</h1>
+    
+    <section id="quiz">
+        <form>
+            <div class="question">
+                <p>1. Ko je prvi izračunao vrijednost broja Pi?</p>
+                <input type="radio" name="q1" value="a"> Arhimed<br>
+                <input type="radio" name="q1" value="b"> Pitagora<br>
+                <input type="radio" name="q1" value="c"> Euler<br>
+            </div>
+            
+            <div class="question">
+                <p>2. Koliko je korijen iz 576?</p>
+                <input type="radio" name="q2" value="a"> 24<br>
+                <input type="radio" name="q2" value="b"> 26<br>
+                <input type="radio" name="q2" value="c"> 28<br>
+            </div>
+            
+            <div class="question">
+                <p>3. Pi je približno jednak:</p>
+                <input type="radio" name="q3" value="a"> 3.14<br>
+                <input type="radio" name="q3" value="b"> 2.71<br>
+                <input type="radio" name="q3" value="c"> 1.62<br>
+            </div>
+            
+            <div class="question">
+                <p>4. Množenjem pozitivnog i negativnog broja dobit ćemo:</p>
+                <input type="radio" name="q4" value="a"> Pozitivan broj<br>
+                <input type="radio" name="q4" value="b"> Negativan broj<br>
+                <input type="radio" name="q4" value="c"> Nulu<br>
+            </div>
+            
+            <div class="question">
+                <p>5. Koji je recipročan broj od 5?</p>
+                <input type="radio" name="q5" value="a"> 1/5<br>
+                <input type="radio" name="q5" value="b"> 5<br>
+                <input type="radio" name="q5" value="c"> -5<br>
+            </div>
+            
+            <div class="question">
+                <p>6. Koji broj se smatra neutralnim elementom za sabiranje?</p>
+                <input type="radio" name="q6" value="a"> 0<br>
+                <input type="radio" name="q6" value="b"> 1<br>
+                <input type="radio" name="q6" value="c"> -1<br>
+            </div>
+            
+            <div class="question">
+                <p>7. Koliko je 2^5?</p>
+                <input type="radio" name="q7" value="a"> 25<br>
+                <input type="radio" name="q7" value="b"> 32<br>
+                <input type="radio" name="q7" value="c"> 64<br>
+            </div>
+            
+            <div class="question">
+                <p>8. Koji je najmanji prost broj?</p>
+                <input type="radio" name="q8" value="a"> 1<br>
+                <input type="radio" name="q8" value="b"> 2<br>
+                <input type="radio" name="q8" value="c"> 3<br>
+            </div>
+            
+            <div class="question">
+                <p>9. Koliko uglova ima šestougao?</p>
+                <input type="radio" name="q9" value="a"> 5<br>
+                <input type="radio" name="q9" value="b"> 6<br>
+                <input type="radio" name="q9" value="c"> 7<br>
+            </div>
+            
+            <div class="question">
+                <p>10. Koliko je 3! (3 faktorijel)?</p>
+                <input type="radio" name="q10" value="a"> 3<br>
+                <input type="radio" name="q10" value="b"> 6<br>
+                <input type="radio" name="q10" value="c"> 9<br>
+            </div>
+            
+            <div class="question">
+                <p>11. Koji je kvadratni korijen broja 49?</p>
+                <input type="radio" name="q11" value="a"> 5<br>
+                <input type="radio" name="q11" value="b"> 6<br>
+                <input type="radio" name="q11" value="c"> 7<br>
+            </div>
+            
+            <div class="question">
+                <p>12. Koliko minuta ima jedan sat?</p>
+                <input type="radio" name="q12" value="a"> 60<br>
+                <input type="radio" name="q12" value="b"> 100<br>
+                <input type="radio" name="q12" value="c"> 120<br>
+            </div>
+            
+            <div class="question">
+                <p>13. Šta je veće, 2/3 ili 3/5?</p>
+                <input type="radio" name="q13" value="a"> 2/3<br>
+                <input type="radio" name="q13" value="b"> 3/5<br>
+                <input type="radio" name="q13" value="c"> Jednaki su<br>
+            </div>
+            
+            <div class="question">
+                <p>14. Ako pravougaonik ima dužinu 8 i širinu 4, kolika mu je površina?</p>
+                <input type="radio" name="q14" value="a"> 32<br>
+                <input type="radio" name="q14" value="b"> 24<br>
+                <input type="radio" name="q14" value="c"> 16<br>
+            </div>
+            
+            <div class="question">
+                <p>15. Koliko je 15% od 200?</p>
+                <input type="radio" name="q15" value="a"> 30<br>
+                <input type="radio" name="q15" value="b"> 25<br>
+                <input type="radio" name="q15" value="c"> 20<br>
+            </div>
+            
+            <button type="submit">Pošalji odgovore</button>
         </form>
     </section>
-
-    <section id="quiz" style="display:none;">
-        <h2>Pitanja</h2>
-        <form id="quiz-form">
-            <div class="question">
-                <p>1. Koji je broj Pi?</p>
-                <label><input type="radio" name="question1" value="A"> 3.14</label><br>
-                <label><input type="radio" name="question1" value="B"> 3.14159</label><br>
-                <label><input type="radio" name="question1" value="C"> 22/7</label><br>
-            </div>
-
-            <div class="question">
-                <p>2. Koji je tačan broj decimala Pi koje je NASA koristila u svom istraživanju?</p>
-                <label><input type="radio" name="question2" value="A"> 100</label><br>
-                <label><input type="radio" name="question2" value="B"> 1000</label><br>
-                <label><input type="radio" name="question2" value="C"> 10000</label><br>
-            </div>
-
-            <div class="question">
-                <p>3. Kako je poznat datum 14. mart u vezi sa Pi-om?</p>
-                <label><input type="radio" name="question3" value="A"> Pi dan</label><br>
-                <label><input type="radio" name="question3" value="B"> Dan matematike</label><br>
-                <label><input type="radio" name="question3" value="C"> Sveti Pi dan</label><br>
-            </div>
-
-            <div class="question">
-                <p>4. Koji je prvi broj u Pi sekvenci nakon decimalne tačke?</p>
-                <label><input type="radio" name="question4" value="A"> 1</label><br>
-                <label><input type="radio" name="question4" value="B"> 4</label><br>
-                <label><input type="radio" name="question4" value="C"> 2</label><br>
-            </div>
-
-            <div class="question">
-                <p>5. Koliko cifara Pi je ljudi uspelo da izračunaju do 2020. godine?</p>
-                <label><input type="radio" name="question5" value="A"> 1 milion</label><br>
-                <label><input type="radio" name="question5" value="B"> 50 miliona</label><br>
-                <label><input type="radio" name="question5" value="C"> 31 trilion</label><br>
-            </div>
-
-            <div class="question">
-                <p>6. Koji matematičar je prvi izračunao decimalni prikaz broja Pi?</p>
-                <label><input type="radio" name="question6" value="A"> Euclid</label><br>
-                <label><input type="radio" name="question6" value="B"> Archimedes</label><br>
-                <label><input type="radio" name="question6" value="C"> Newton</label><br>
-            </div>
-
-            <div class="question">
-                <p>7. Pi je poznat i kao...</p>
-                <label><input type="radio" name="question7" value="A"> Grčki broj</label><br>
-                <label><input type="radio" name="question7" value="B"> Matematika konstanta</label><br>
-                <label><input type="radio" name="question7" value="C"> Nezavistan broj</label><br>
-            </div>
-
-            <div class="question">
-                <p>8. Koja je poznata pesma koja koristi brojeve Pi?</p>
-                <label><input type="radio" name="question8" value="A"> Pi pesma</label><br>
-                <label><input type="radio" name="question8" value="B"> Pi rap</label><br>
-                <label><input type="radio" name="question8" value="C"> Pi kanta</label><br>
-            </div>
-
-            <div class="question">
-                <p>9. Koliko cifara u Pi je koriste se u računanju kruga?</p>
-                <label><input type="radio" name="question9" value="A"> 2</label><br>
-                <label><input type="radio" name="question9" value="B"> 5</label><br>
-                <label><input type="radio" name="question9" value="C"> Nema broja, koristi se samo Pi</label><br>
-            </div>
-
-            <div class="question">
-                <p>10. Kako nazivamo broj Pi u matematici?</p>
-                <label><input type="radio" name="question10" value="A"> Konstanta</label><br>
-                <label><input type="radio" name="question10" value="B"> Aproksimacija</label><br>
-                <label><input type="radio" name="question10" value="C"> Algoritam</label><br>
-            </div>
-
-            <button type="submit">Pošaljite odgovore</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Pi Kviz. Sva prava zadržana.</p>
-    </footer>
-
-    <script>
-        // Skripta za upravljanje registracijom
-        document.getElementById('registration-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const email = document.getElementById('email').value;
-            if (email) {
-                alert('Registracija uspešna! Dobrodošli na kviz!');
-                document.getElementById('registration').style.display = 'none';
-                document.getElementById('quiz').style.display = 'block';
-            }
-        });
-
-        // Skripta za upravljanje slanjem odgovora na kviz
-        document.getElementById('quiz-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            let score = 0;
-            const answers = {
-                question1: 'B',
-                question2: 'B',
-                question3: 'A',
-                question4: 'B',
-                question5: 'C',
-                question6: 'B',
-                question7: 'B',
-                question8: 'B',
-                question9: 'C',
-                question10: 'A'
-            };
-
-            // Proverava sve odgovore
-            for (let question in answers) {
-                const selected = document.querySelector(`input[name="${question}"]:checked`);
-                if (selected && selected.value === answers[question]) {
-                    score++;
-                }
-            }
-
-            // Prikazuje rezultat
-            alert(`Vaš rezultat je: ${score} od 10`);
-        });
-    </script>
-
 </body>
 </html>
