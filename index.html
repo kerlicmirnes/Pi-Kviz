@@ -4,233 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pi Kviz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header, section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 1000px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .quiz-container {
-            display: none;
-        }
-        .quiz-question {
-            margin-bottom: 10px;
-        }
-        .registration-form {
-            margin-top: 20px;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-<header>
-    <h1>Pi Kviz</h1>
-    <p>Dobrodošli u Pi Kviz! Ovdje možete naučiti zanimljivosti o broju Pi i testirati svoje znanje.</p>
-</header>
+    <!-- Zanimljivosti o broju Pi -->
+    <section id="novosti">
+        <h2>Zanimljivosti o broju Pi</h2>
+        <ul>
+            <li>Pi je iracionalan broj.</li>
+            <li>Prvi put se koristio u matematici u 3. vijeku prije nove ere.</li>
+            <li>Broj Pi nikada ne završava ili ponavlja.</li>
+            <li>Prvih nekoliko decimala Pi su: 3.1415926535...</li>
+            <li>Pi se koristi u mnogim matematičkim izračunima.</li>
+            <li>Broj Pi je poznat u mnogim kulturama širom svijeta.</li>
+            <li>Pi je pronađen u starom Egiptu i Babilonu.</li>
+            <li>Postoji Pi Dan, koji se slavi 14. marta.</li>
+            <li>Pi je omiljen među matematičarima zbog svoje nepredvidivosti.</li>
+            <li>Pi je osnovni element u geometriji za izračunavanje obima i površine kruga.</li>
+            <li>Pi se koristi u mnogim fizikalnim formulama.</li>
+            <li>Broj Pi se koristi i u statistici i teoriji vjerojatnosti.</li>
+            <li>Pi je bio predmet mnogih pokušaja da se izračuna preciznije tokom istorije.</li>
+            <li>Pi se smatra matematičkim konstantama koja se nikad ne ponavlja.</li>
+        </ul>
+    </section>
 
-<section id="interesting-facts">
-    <h2>Zanimljivosti o broju Pi</h2>
-    <ul>
-        <li>Pi je iracionalan broj, što znači da se ne može izraziti kao razlomak.</li>
-        <li>Prve tri decimale broja Pi su 3.141.</li>
-        <li>Pi se koristi za izračunavanje opsega i površine kruga.</li>
-        <li>Pi je beskonačan i nema ponavljajuće decimale.</li>
-        <li>Najduža poznata sekvenca decimala Pi ima više od 50 milijardi cifara.</li>
-        <li>Pi je bio poznat još u starom Egiptu, gdje su izračunavali njegovu vrednost sa velikom preciznošću.</li>
-        <li>Izraz "Pi" dolazi od grčke riječi "periferija".</li>
-        <li>Pi je prvi put izračunat sa preciznošću od 3 decimalna mjesta oko 1900. godine.</li>
-        <li>Pi se koristi u mnogim područjima, uključujući inženjering, astronomiju, fiziku i računarstvo.</li>
-        <li>Pi je također korišten u raznim umetničkim i književnim delima.</li>
-        <li>U matematičkoj literaturi, Pi se često koristi kao simbol za tajne ili misterije.</li>
-        <li>Pi je 15. u redu brojeva u poznatom "matematičkom" sistemu.</li>
-        <li>Pi je korišten u formuli za izračunavanje zapremine kugle.</li>
-        <li>Pi se pojavljuje u mnogim naučnim i tehničkim aplikacijama.</li>
-        <li>Pi dan se slavi 14. marta, jer je datum 3/14 u formatu MM/DD.</li>
-        <li>Pi je pronađen kao precizan broj do miliona decimala još 1949. godine.</li>
-        <li>Pi je bio poznat ljudima u 3. veku pre nove ere, kada su ga koristili u geometriji.</li>
-        <li>Pi je pronađen u drevnim sumerskim zapisima u Mezopotamiji.</li>
-    </ul>
-</section>
+    <!-- Registracija za kviz -->
+    <section id="registracija">
+        <h2>Registracija za Pi Kviz</h2>
+        <form id="registration-form">
+            <label for="email">Unesite vaš email:</label>
+            <input type="email" id="email" name="email" required placeholder="Unesite vaš email">
+            <button type="submit">Registruj se</button>
+        </form>
+        <p id="thank-you-message" style="display: none;">Hvala na registraciji! Pripremite se za kviz.</p>
+    </section>
 
-<section id="registration">
-    <h2>Registrujte se za kviz</h2>
-    <form class="registration-form" id="registration-form">
-        <label for="email">Unesite vaš e-mail:</label>
-        <input type="email" id="email" name="email" required>
-        <button type="submit">Registruj se</button>
-    </form>
-</section>
-
-<section id="quiz" class="quiz-container">
-    <h2>Pi Kviz</h2>
-    <form id="quiz-form">
-        <div class="quiz-question">
-            <p>1. Koji je broj Pi do 3 decimalna mesta?</p>
-            <input type="radio" id="q1a" name="q1" value="3.141" required>
-            <label for="q1a">3.141</label><br>
-            <input type="radio" id="q1b" name="q1" value="3.14">
-            <label for="q1b">3.14</label><br>
-            <input type="radio" id="q1c" name="q1" value="3.142">
-            <label for="q1c">3.142</label><br>
-        </div>
-      <section id="quiz" class="quiz-container">
-    <h2>Pi Kviz</h2>
-    <form id="quiz-form">
-
-        <div class="quiz-question">
-            <p>1. Koji je broj Pi do 3 decimalna mjesta?</p>
-            <input type="radio" id="q1a" name="q1" value="3.141" required>
-            <label for="q1a">3.141</label><br>
-            <input type="radio" id="q1b" name="q1" value="3.14">
-            <label for="q1b">3.14</label><br>
-            <input type="radio" id="q1c" name="q1" value="3.142">
-            <label for="q1c">3.142</label><br>
-        </div>
-
-        <div class="quiz-question">
-            <p>2. Koliko decimala broja Pi je izračunato do sada?</p>
-            <input type="radio" id="q2a" name="q2" value="nekoliko hiljada" required>
-            <label for="q2a">Nekoliko hiljada</label><br>
-            <input type="radio" id="q2b" name="q2" value="preko trilion">
-            <label for="q2b">Preko trilion</label><br>
-            <input type="radio" id="q2c" name="q2" value="100 miliona">
-            <label for="q2c">100 miliona</label><br>
-        </div>
-
-        <div class="quiz-question">
-            <p>3. Koji grčki matematičar je prvi izračunao aproksimaciju broja Pi?</p>
-            <input type="radio" id="q3a" name="q3" value="Arhimed" required>
-            <label for="q3a">Arhimed</label><br>
-            <input type="radio" id="q3b" name="q3" value="Euklid">
-            <label for="q3b">Euklid</label><br>
-            <input type="radio" id="q3c" name="q3" value="Pitagora">
-            <label for="q3c">Pitagora</label><br>
-        </div>
-
-        <div class="quiz-question">
-            <p>4. Koja je simbolička oznaka za broj Pi?</p>
-            <input type="radio" id="q4a" name="q4" value="Φ" required>
-            <label for="q4a">Φ</label><br>
-            <input type="radio" id="q4b" name="q4" value="π">
-            <label for="q4b">π</label><br>
-            <input type="radio" id="q4c" name="q4" value="Ω">
-            <label for="q4c">Ω</label><br>
-        </div>
-
-        <div class="quiz-question">
-            <p>5. Koliko iznosi Pi do 5 decimalnih mjesta?</p>
-            <input type="radio" id="q5a" name="q5" value="3.14159" required>
-            <label for="q5a">3.14159</label><br>
-            <input type="radio" id="q5b" name="q5" value="3.14158">
-            <label for="q5b">3.14158</label><br>
-            <input type="radio" id="q5c" name="q5" value="3.14160">
-            <label for="q5c">3.14160</label><br>
-        </div>
-
-        <div class="quiz-question">
-            <p>6. Pi je:</p>
-            <input type="radio" id="q6a" name="q6" value="racionalan broj" required>
-            <label for="q6a">Racionalan broj</label><br>
-            <input type="radio" id="q6b" name="q6" value="iracionalan broj">
-            <label for="q6b">Iracionalan broj</label><br>
-            <input type="radio" id="q6c" name="q6" value="cijeli broj">
-            <label for="q6c">Cijeli broj</label><br>
-        </div>
-
-        <div class="quiz-question">
-            <p>7. Koji je drugi naziv za Pi?</p>
-            <input type="radio" id="q7a" name="q7" value="Arhimedova konstanta" required>
-            <label for="q7a">Arhimedova konstanta</label><br>
-            <input type="radio" id="q7b" name="q7" value="Eulerova konstanta">
-            <label for="q7b">Eulerova konstanta</label><br>
-            <input type="radio" id="q7c" name="q7" value="Fibonaccijeva konstanta">
-            <label for="q7c">Fibonaccijeva konstanta</label><br>
-        </div>
-
-        <div class="quiz-question">
-            <p>8. U kojem stoljeću je simbol π prvi put korišten za označavanje broja Pi?</p>
-            <input type="radio" id="q8a" name="q8" value="17. stoljeću" required>
-            <label for="q8a">17. stoljeću</label><br>
-            <input type="radio" id="q8b" name="q8" value="18. stoljeću">
-            <label for="q8b">18. stoljeću</label><br>
-            <input type="radio" id="q8c" name="q8" value="19. stoljeću">
-            <label for="q8c">19. stoljeću</label><br>
-        </div>
-
-        <!-- Dodaj još pitanja ovim stilom do 14. pitanja -->
-
-        <div class="quiz-question">
-            <p>14. Koja je svrha broja Pi u matematici?</p>
-            <input type="radio" id="q14a" name="q14" value="Izračunavanje obima i površine kruga" required>
-            <label for="q14a">Izračunavanje obima i površine kruga</label><br>
-            <input type="radio" id="q14b" name="q14" value="Pravljenje slučajnih brojeva">
-            <label for="q14b">Pravljenje slučajnih brojeva</label><br>
-            <input type="radio" id="q14c" name="q14" value="Rješavanje kvadratnih jednačina">
-            <label for="q14c">Rješavanje kvadratnih jednačina</label><br>
-        </div>
-
-        <button type="submit">Pošalji odgovore</button>
-    </form>
-</section>
-
-        <button type="submit">Završi kviz</button>
-    </form>
-</section>
-
-<script>
-    document.getElementById('registration-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        let email = document.getElementById('email').value;
-        if (email) {
-            document.getElementById('registration').style.display = 'none';
-            document.getElementById('quiz').style.display = 'block';
-        }
-    });
-</script>
-<script>
-    document.getElementById("quiz-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Spriječava da se stranica ponovo učita
-
-        let score = 0;
-        const totalQuestions = 14;
-
-        // Provjeri odgovore (promijeni prema svojim pitanjima)
-        if (document.getElementById("q1a").checked) score++;
-        if (document.getElementById("q2b").checked) score++;
-        if (document.getElementById("q3a").checked) score++;
-        if (document.getElementById("q4b").checked) score++;
-        if (document.getElementById("q5a").checked) score++;
-        if (document.getElementById("q6b").checked) score++;
-        if (document.getElementById("q7a").checked) score++;
-        if (document.getElementById("q8a").checked) score++;
-        // Nastavi za ostala pitanja...
-
-        // Prikaži rezultat
-        alert(`Tvoj rezultat je ${score} od ${totalQuestions} tačnih odgovora.`);
-    });
-</script>
+    <!-- Pi Kviz -->
+    <section id="kviz" style="display: none;">
+        <h2>Pi Kviz</h2>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Koliko decimala broja Pi je poznato?</p>
+                <input type="radio" id="q1a" name="q1" value="a">
+                <label for="q1a">100</label><br>
+                <input type="radio" id="q1b" name="q1" value="b">
+                <label for="q1b">1000</label><br>
+                <input type="radio" id="q1c" name="q1" value="c">
+                <label for="q1c">Neograničeno</label><br>
+            </div>
+            <div class="question">
+                <p>2. Koji je datum Pi Dana?</p>
+                <input type="radio" id="q2a" name="q2" value="a">
+                <label for="q2a">14. februar</label><br>
+                <input type="radio" id="q2b" name="q2" value="b">
+                <label for="q2b">14. mart</label><br>
+                <input type="radio" id="q2c" name="q2" value="c">
+                <label for="q2c">1. april</label><br>
+            </div>
+            <div class="question">
+                <p>3. Koji je broj Pi najpoznatiji za izračunavanje?</p>
+                <input type="radio" id="q3a" name="q3" value="a">
+                <label for="q3a">Obim kruga</label><br>
+                <input type="radio" id="q3b" name="q3" value="b">
+                <label for="q3b">Površina kruga</label><br>
+                <input type="radio" id="q3c" name="q3" value="c">
+                <label for="q3c">Težina kruga</label><br>
+            </div>
+            <div class="question">
+                <p>4. Šta je "Pi Dan"?</p>
+                <input type="radio" id="q4a" name="q4" value="a">
+                <label for="q4a">Dan kada je Pi pronađen</label><br>
+                <input type="radio" id="q4b" name="q4" value="b">
+                <label for="q4b">Dan kada se slavi broj Pi</label><br>
+                <input type="radio" id="q4c" name="q4" value="c">
+                <label for="q4c">Dan kada su prva decimala Pi otkrivena</label><br>
+            </div>
+            <div class="question">
+                <p>5. Koji je najpoznatiji broj za koji se koristi Pi?</p>
+                <input type="radio" id="q5a" name="q5" value="a">
+                <label for="q5a">3.141</label><br>
+                <input type="radio" id="q5b" name="q5" value="b">
+                <label for="q5b">3.1</label><br>
+                <input type="radio" id="q5c" name="q5" value="c">
+                <label for="q5c">3.14</label><br>
+            </div>
+            <div class="question">
+                <p>6. Da li broj Pi ima krajnji broj decimala?</p>
+                <input type="radio" id="q6a" name="q6" value="a">
+                <label for="q6a">Da</label><br>
+                <input type="radio" id="q6b" name="q6" value="b">
+                <label for="q6b">Ne</label><br>
+            </div>
+            <div class="question">
+                <p>7. U kojoj oblasti matematike Pi najčešće koristimo?</p>
+                <input type="radio" id="q7a" name="q7" value="a">
+                <label for="q7a">Algebra</label><br>
+                <input type="radio" id="q7b" name="q7" value="b">
+                <label for="q7b">Geometrija</label><br>
+                <input type="radio" id="q7c" name="q7" value="c">
+                <label for="q7c">Račun</label><br>
+            </div>
+            <div class="question">
+                <p>8. Da li je broj Pi racionalan?</p>
+                <input type="radio" id="q8a" name="q8" value="a">
+                <label for="q8a">Da</label><br>
+                <input type="radio" id="q8b" name="q8" value="b">
+                <label for="q8b">Ne</label><br>
+            </div>
+            <div class="question">
+                <p>9. Koja je prva cifra broja Pi nakon decimalne tačke?</p>
+                <input type="radio" id="q9a" name="q9" value="a">
+                <label for="q9a">1</label><br>
+                <input type="radio" id="q9b" name="q9" value="b">
+                <label for="q9b">4</label><br>
+                <input type="radio" id="q9c" name="q9" value="c">
+                <label for="q9c">3</label><br>
+            </div>
+            <div class="question">
+                <p>10. Pi je važan u računanju:</p>
+                <input type="radio" id="q10a" name="q10" value="a">
+                <label for="q10a">Obima i površine kvadrata</label><br>
+                <input type="radio" id="q10b" name="q10" value="b">
+                <label for="q10b">Obima i površine kruga</label><br>
+                <input type="radio" id="q10c" name="q10" value="c">
+                <label for="q10c">Površine pravouglog trougla</label><br>
+            </div>
+            <div class="question">
+                <p>11. Koji je najpoznatiji broj za koji se koristi Pi?</p>
+                <input type="radio" id="q11a" name="q11" value="a">
+                <label for="q11a">3.141</label><br>
+                <input type="radio" id="q11b" name="q11" value="b">
+                <label for="q11b">3.1</label><br>
+                <input type="radio" id="q11c" name="q11" value="c">
+                <label for="q11c">3.14</label><br>
+            </div>
+            <div class="question">
+                <p>12. Koliko cifara Pi je poznato do danas?</p>
+                <input type="radio" id="q12a" name="q12" value="a">
+                <label for="q12a">10</label><br>
+                <input type="radio" id="q12b" name="q12" value="b">
+                <label for="q12b">Milion</label><br>
+                <input type="radio" id="q12c" name="q12" value="c">
+                <label for="q12c">Neograničeno</label><br>
+            </div>
+            <div class="question">
+                <p>13. Pi je od pomoći u računanju:</p>
+                <input type="radio" id="q13a" name="q13" value="a">
+                <label for="q13a">Površine i zapremine kocke</label><br>
+                <input type="radio" id="q13b" name="q13" value="b">
+                <label for="q13b">Površine i zapremine kruga</label><br>
+                <input type="radio" id="q13c" name="q13" value="c">
+                <label for="q13c">Površine i zapremine sfere</label><br>
+            </div>
+            <div class="question">
+                <p>14. Koji matematičar je prvi izračunao nekoliko decimala broja Pi?</p>
+                <input type="radio" id="q14a" name="q14" value="a">
+                <label for="q14a">Isaac Newton</label><br>
+                <input type="radio" id="q14b" name="q14" value="b">
+                <label for="q14b">Archimedes</label><br>
+                <input type="radio" id="q14c" name="q14" value="c">
+                <label for="q14c">Albert Einstein</label><br>
+            </div>
+            <div class="question">
+                <p>15. Da li broj Pi postoji u stvarnom svetu?</p>
+                <input type="radio" id="q15a" name="q15" value="a">
+                <label for="q15a">Da</label><br>
+                <input type="radio" id="q15b" name="q15" value="b">
+                <label for="q15b">Ne</label><br>
+            </div>
+            <button type="submit">Pošaljite odgovore</button>
+        </form>
+        <p id="result" style="display: none;"></p>
+    </section>
 
 </body>
 </html>
